@@ -1,8 +1,11 @@
-<div class="article-display">
-  <h1 class="title"> {{article?.title}} </h1>
-  <h3 class="author">
-    <img src="{{ author?.profilePicture }}" class="profile-picture" />
-    {{author?.name}}
-  </h3>
-  <div class="article" [innerHTML]="article.text"> </div>
+<div class="centered">
+  <div class="article-display">
+    <h1 class="title centered"> {{article?.title}} </h1>
+    <h3 class="author centered">
+      <img src="{{ author?.profilePicture }}" class="profile-picture" />
+      Written by {{author?.name}} and posted on {{ article?.datePosted | date }}.
+    </h3>
+    <hr />
+    <div class="article" [innerHTML]="article.text"> </div>
+  </div>
 </div>
